@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="1"
+ >
+
+    <View
+        android:id="@+id/splash_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/background"
+        />
+
+    <TextView
+        android:id="@+id/titleView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="@string/main_question"
+        android:textColor="#fffbfdff"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/abc_background_cache_hint_selector_material_dark"
+        android:autoText="false" />
+
+    <com.example.trunch.TagsCompletionView
+        android:id="@+id/searchView"
+        android:layout_width="313dp"
+        android:layout_height="30dp"
+        android:hint="@string/food_prompt"
+        android:textColorHint="@color/blue"
+        android:background="@color/white"
+        android:imeOptions="actionDone"
+        android:textColor="#ffffbe01"
+        android:textSize="12sp"
+        android:inputType="text|textNoSuggestions|textMultiLine"
+        android:focusableInTouchMode="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left|right" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mainContainer"
+        android:visibility="visible"
+        android:layout_weight="0.08"
+        android:gravity="center|bottom"
+        android:weightSum="1">
+        <!--  <GridView
+                  xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/tagsGrid"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:numColumns="3"
+                  android:columnWidth="100dp"
+                  android:stretchMode="columnWidth"
+                  android:gravity="center">
+          </GridView>-->
+
+    <com.example.trunch.HorizontialListView
+        android:id="@+id/restContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants" />
+    </RelativeLayout>
+    </LinearLayout>
